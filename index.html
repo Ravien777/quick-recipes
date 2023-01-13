@@ -12,54 +12,59 @@
     />
   </head>
   <body>
-    <div class="side-menu">
-      <ul class="menu-items">
-        <li class="menu-item"><a href="" class="link">Dinner</a></li>
-        <li class="menu-item"><a href="" class="link">Lunch</a></li>
-        <li class="menu-item"><a href="" class="link">Breakfast</a></li>
-        <li class="menu-item"><a href="" class="link">Snacks</a></li>
-        <li class="menu-item"><a href="" class="link">Indian</a></li>
-        <li class="menu-item"><a href="" class="link">Javanese</a></li>
-        <li class="menu-item"><a href="" class="link">Popular</a></li>
-        <li class="menu-item"><a href="" class="link">My Account</a></li>
-      </ul>
-    </div>
     <div class="container">
-      <header>
-        <div class="header-mobile">
-          <div class="top">
+      <div class="card-face card-back side-menu">
+        <button class="close-menu">
+          <i class="fa fa-close fa-2x" aria-hidden="true"></i>
+        </button>
+        <ul class="menu-items">
+          <li class="menu-item"><a href="" class="link">Dinner</a></li>
+          <li class="menu-item"><a href="" class="link">Lunch</a></li>
+          <li class="menu-item"><a href="" class="link">Breakfast</a></li>
+          <li class="menu-item"><a href="" class="link">Snacks</a></li>
+          <li class="menu-item"><a href="" class="link">Indian</a></li>
+          <li class="menu-item"><a href="" class="link">Javanese</a></li>
+          <li class="menu-item"><a href="" class="link">Popular</a></li>
+          <li class="menu-item"><a href="" class="link">My Account</a></li>
+        </ul>
+      </div>
+      <div class="card-face card-front">
+        <header>
+          <div class="header-mobile">
+            <div class="top">
+              <img
+                src="img/surinaamse-recepten-logo.png"
+                alt="Surinaamse Recepten"
+                class="logo"
+                width="150"
+                height="auto"
+              />
+              <button class="open-menu">
+                <i class="fa fa-bars fa-2x" aria-hidden="true"></i>
+              </button>
+            </div>
+            <div class="search-form">
+              <input
+                type="search"
+                name="search"
+                id="search"
+                placeholder="recept zoeken..."
+              />
+              <a href=""><i class="fa fa-search" aria-hidden="true"></i></a>
+            </div>
+          </div>
+          <div class="header-main">
             <img
               src="img/surinaamse-recepten-logo.png"
               alt="Surinaamse Recepten"
               class="logo"
-              width="150"
-              height="auto"
             />
-            <button class="toggle-menu">
-              <i class="fa fa-bars fa-2x" aria-hidden="true"></i>
-            </button>
           </div>
-          <div class="search-form">
-            <input
-              type="search"
-              name="search"
-              id="search"
-              placeholder="recept zoeken..."
-            />
-            <a href=""><i class="fa fa-search" aria-hidden="true"></i></a>
-          </div>
-        </div>
-        <div class="header-main">
-          <img
-            src="img/surinaamse-recepten-logo.png"
-            alt="Surinaamse Recepten"
-            class="logo"
-          />
-        </div>
-        <div class="header-secondary"></div>
-      </header>
-      <main></main>
-      <footer></footer>
+          <div class="header-secondary"></div>
+        </header>
+        <main></main>
+      </div>
     </div>
+    <script src="js/main.js"></script>
   </body>
 </html>

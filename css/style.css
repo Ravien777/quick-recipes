@@ -2,11 +2,37 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  font-family: 'Poppins', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  font-family: "Poppins", "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
 }
 
 body {
   background-color: #f8f5f2;
+  perspective: 600px;
+}
+
+.container {
+  width: 100%;
+  transition: transform 1s;
+  transform-style: preserve-3d;
+  position: relative;
+  backface-visibility: hidden;
+  -webkit-backface-visibility: hidden;
+}
+
+.container.is-flipped {
+  transform: rotateY(180deg);
+}
+
+.card-face {
+  position: absolute;
+  width: 100%;
+}
+
+.card-back {
+  transform: rotateY(180deg);
+  height: 100vh;
+  backface-visibility: hidden;
+  -webkit-backface-visibility: hidden;
 }
 
 .header-main,
@@ -28,7 +54,8 @@ body {
   justify-content: space-between;
 }
 
-.header-mobile .toggle-menu {
+.open-menu,
+.close-menu {
   background-color: transparent;
   border: none;
   cursor: pointer;
