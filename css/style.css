@@ -79,13 +79,13 @@ body {
   padding: 5px 10px;
   font-size: 1.1em;
   color: #431c16;
-  width: 85%;
+  width: calc(100% - 40px);
 }
 
 .search-form a {
   color: #fff;
   font-size: 1.1em;
-  width: 15%;
+  width: 40px;
   border-radius: 0px 25px 25px 0px;
   padding: 5px 10px;
 }
@@ -126,6 +126,34 @@ body {
   text-transform: uppercase;
 }
 
+.menu-item a:hover {
+  color: #982a1d;
+}
+
+.hover-underline {
+  display: inline-block;
+  position: relative;
+  color: #982a1d;
+}
+
+.hover-underline:after {
+  content: "";
+  position: absolute;
+  width: 100%;
+  transform: scaleX(0);
+  height: 2px;
+  bottom: 0;
+  left: 0;
+  background-color: #982a1d;
+  transform-origin: bottom left;
+  transition: transform 0.25s ease-out;
+}
+
+.hover-underline:hover:after {
+  transform: scaleX(1);
+  transform-origin: bottom right;
+}
+
 @media screen and (min-width: 481px) {
 }
 @media screen and (min-width: 769px) {
@@ -133,10 +161,40 @@ body {
   .side-menu {
     display: none;
   }
-  .header-main,
+  .header-main {
+    padding: 15px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    gap: 50px;
+  }
+  .header-main .right {
+    display: inherit;
+    flex-direction: inherit;
+    justify-content: inherit;
+    align-items: inherit;
+    gap: inherit;
+  }
+  .my-account {
+    text-decoration: none;
+    color: #431c16;
+  }
+  .my-account:hover {
+    color: #982a1d;
+  }
   .header-secondary {
     display: block;
+    padding: 0 15px;
+  }
+  .header-secondary .menu-items {
+    flex-direction: row;
+    justify-content: space-evenly;
   }
 }
 @media screen and (min-width: 1025px) {
+  .header-secondary .menu-items {
+    justify-content: center;
+    gap: 50px;
+  }
 }
