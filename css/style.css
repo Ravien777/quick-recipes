@@ -7,7 +7,6 @@
 
 body {
   max-width: 100%;
-  overflow: hidden;
   background-color: #f8f5f2;
   perspective: 600px;
 }
@@ -48,6 +47,7 @@ body {
   display: flex;
   flex-direction: column;
   gap: 10px;
+  margin-bottom: 15px;
 }
 
 .header-mobile .top {
@@ -154,6 +154,11 @@ body {
   transform-origin: bottom right;
 }
 
+.hero img {
+  width: 100%;
+  height: auto;
+}
+
 @media screen and (min-width: 481px) {
 }
 @media screen and (min-width: 769px) {
@@ -170,11 +175,8 @@ body {
     gap: 50px;
   }
   .header-main .right {
-    display: inherit;
-    flex-direction: inherit;
-    justify-content: inherit;
-    align-items: inherit;
-    gap: inherit;
+    all: inherit;
+    padding: 0;
   }
   .my-account {
     text-decoration: none;
@@ -186,6 +188,7 @@ body {
   .header-secondary {
     display: block;
     padding: 0 15px;
+    margin-bottom: 15px;
   }
   .header-secondary .menu-items {
     flex-direction: row;
