@@ -194,12 +194,21 @@ body {
 .hero-text h2 {
   font-size: 1.7em;
   font-family: "Brush Script MT", cursive;
+  -webkit-user-select: none; /* Safari */
+  -moz-user-select: none; /* Firefox */
+  user-select: none; /* Standard */
+}
+
+.hero-text p {
+  -webkit-user-select: none; /* Safari */
+  -moz-user-select: none; /* Firefox */
+  user-select: none; /* Standard */
 }
 
 .hero-text a {
   text-decoration: none;
   color: black;
-  padding: 5px 10px;
+  padding: 5px 5px;
   border: 1px solid black;
 }
 
@@ -207,6 +216,46 @@ body {
   color: #fff;
   border: 1px solid #982a1d;
   background-color: #982a1d;
+}
+
+.news {
+  background-color: #fff;
+  padding: 15px;
+  margin: 15px;
+  border-radius: 10px;
+
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 15px;
+}
+
+.news h2 {
+  grid-column: span 2;
+  text-align: center;
+}
+
+.news-item {
+  text-align: center;
+  font-size: smaller;
+}
+
+.news-item a {
+  text-decoration: none;
+  color: unset;
+}
+
+.news-item a:hover {
+  text-decoration: underline;
+}
+
+.news-item .img-container {
+  width: 100%;
+  height: 150px;
+}
+
+.img-container img {
+  width: 100%;
+  height: 100%;
 }
 
 @media screen and (min-width: 481px) {
@@ -218,6 +267,9 @@ body {
   }
   .hero-text p {
     font-size: 1.1em;
+  }
+  .news-item .img-container {
+    height: 200px;
   }
 }
 @media screen and (min-width: 769px) {
@@ -265,6 +317,16 @@ body {
   .hero-text a {
     padding: 10px 20px;
   }
+  .news {
+    width: 25%;
+    grid-template-columns: 1fr;
+  }
+  .news h2 {
+    grid-column: span 1;
+  }
+  .news-item .img-container {
+    height: 150px;
+  }
 }
 @media screen and (min-width: 1025px) {
   .header-secondary .menu-items {
@@ -283,5 +345,8 @@ body {
   }
   .hero-text p {
     font-size: 2em;
+  }
+  .news {
+    width: 20%;
   }
 }
