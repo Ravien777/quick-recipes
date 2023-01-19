@@ -24,16 +24,17 @@ body {
   transform: rotateY(180deg);
 }
 
-.card-face {
+.card-back,
+.card-front {
   position: absolute;
+  height: 100vh;
   width: 100%;
+  backface-visibility: hidden;
+  -webkit-backface-visibility: hidden;
 }
 
 .card-back {
   transform: rotateY(180deg);
-  height: 100vh;
-  backface-visibility: hidden;
-  -webkit-backface-visibility: hidden;
 }
 
 .header-main,
