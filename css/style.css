@@ -7,7 +7,7 @@
 
 body {
   max-width: 100%;
-  background-color: #f8f5f2;
+  background-color: #fff;
   perspective: 600px;
 }
 
@@ -57,18 +57,24 @@ body {
   justify-content: space-between;
 }
 
+.logo {
+  height: calc(1.1em + 22px);
+  width: auto;
+  vertical-align: middle;
+}
+
 .open-menu,
 .close-menu {
   background-color: transparent;
   border: none;
   cursor: pointer;
-  color: #ff914d;
+  color: #431c16;
 }
 
 .search-form {
   border: 1px solid #431c16;
-  border-radius: 25px;
-  background-color: #982a1d;
+  border-radius: 10px;
+  background-color: #431c16;
   display: flex;
   flex-direction: row;
   align-items: center;
@@ -76,7 +82,7 @@ body {
 
 .search-form input {
   border: none;
-  border-radius: 25px 0px 0px 25px;
+  border-radius: 10px 0px 0px 10px;
   padding: 5px 10px;
   font-size: 1.1em;
   color: #431c16;
@@ -84,10 +90,10 @@ body {
 }
 
 .search-form a {
-  color: #fff;
+  color: #f8f5f2;
   font-size: 1.1em;
   width: 40px;
-  border-radius: 0px 25px 25px 0px;
+  border-radius: 0px 10px 10px 0px;
   padding: 5px 10px;
 }
 
@@ -97,6 +103,20 @@ body {
 
 .search-form input:focus {
   outline: none;
+}
+
+.my-account {
+  border: 1px solid #431c16;
+  background-color: #431c16;
+  padding: 2px;
+  border-radius: 10px;
+  height: calc(1.1em + 20px);
+}
+
+.my-account img {
+  height: 100%;
+  width: 100%;
+  border-radius: 10px;
 }
 
 .side-menu {
@@ -211,6 +231,7 @@ body {
   color: black;
   padding: 5px 5px;
   border: 1px solid black;
+  border-radius: 10px;
 }
 
 .hero-text a:hover {
@@ -220,7 +241,7 @@ body {
 }
 
 .news {
-  background-color: #fff;
+  background-color: #f8f5f2;
   padding: 15px;
   margin: 15px;
   border-radius: 10px;
