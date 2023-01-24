@@ -33,6 +33,11 @@ p {
   color: var(--second-color);
 }
 
+a {
+  text-decoration: none;
+  color: var(--second-color);
+}
+
 .logo-link {
   height: 1.7rem;
   width: auto;
@@ -86,7 +91,7 @@ header {
   width: 1.5rem;
   height: 0.27rem;
   background-color: var(--second-color);
-  border-radius: 10px;
+  border-radius: 1rem;
 }
 
 .hamburger-menu .line:not(:last-child) {
@@ -130,7 +135,6 @@ header {
 }
 
 .menu-item .link {
-  text-decoration: none;
   font-weight: bold;
 }
 
@@ -187,7 +191,152 @@ header {
 
 .hero-content h1 {
   user-select: none;
+  margin-bottom: 0.5rem;
+  padding: 0 1rem;
+  color: var(--second-color);
+}
+
+.search-form {
+  background-color: #fff;
+  border-radius: 1rem;
+  width: 100%;
+  cursor: text;
+}
+
+.search-form input {
+  width: 85%;
+  height: 100%;
+  border: none;
+  border-radius: 1rem;
+  padding: 10px;
+  color: var(--second-color);
+  letter-spacing: 1px;
+}
+
+.search-form input::placeholder {
+  color: var(--third-color);
+}
+
+.search-form input:focus {
+  outline: none;
 }
 
 .popular-collections {
+  padding: 1rem;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.collections {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1rem;
+}
+
+.collection-item {
+  grid-column: span 1;
+  max-height: 150px;
+}
+
+.collection-link.seafood {
+  display: inline-block;
+  width: 100%;
+  height: 150px;
+  background-image: url("../img/seafood.jpg");
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: 150%;
+  border-radius: 1rem;
+  position: relative;
+  color: var(--second-color);
+  transition: background-size 0.5s ease;
+}
+
+.collection-link.breakfast {
+  display: inline-block;
+  width: 100%;
+  height: 150px;
+  background-image: url("../img/Breakfast.jpg");
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: 150%;
+  border-radius: 1rem;
+  position: relative;
+  color: var(--second-color);
+  transition: background-size 0.5s ease;
+}
+
+.collection-link.dinner {
+  display: inline-block;
+  width: 100%;
+  height: 150px;
+  background-image: url("../img/dinner.jpg");
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: 150%;
+  border-radius: 1rem;
+  position: relative;
+  color: var(--second-color);
+  transition: background-size 0.5s ease;
+}
+
+.collection-link.salads {
+  display: inline-block;
+  width: 100%;
+  height: 150px;
+  background-image: url("../img/Salads.jpg");
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: 150%;
+  border-radius: 1rem;
+  position: relative;
+  color: var(--second-color);
+  transition: background-size 0.5s ease;
+}
+
+.collection-link:hover {
+  background-size: 200%;
+}
+
+.collection-item p {
+  position: absolute;
+  bottom: 0;
+
+  width: 100%;
+  padding: 50px 15px 10px 15px;
+  border-radius: 1rem;
+  background: -moz-linear-gradient(
+    top,
+    rgba(0, 0, 0, 0) 0%,
+    rgba(0, 0, 0, 0.75) 100%
+  );
+  background: -webkit-linear-gradient(
+    top,
+    rgba(0, 0, 0, 0) 0%,
+    rgba(0, 0, 0, 0.75) 100%
+  );
+  background: linear-gradient(
+    to bottom,
+    rgba(0, 0, 0, 0) 0%,
+    rgba(0, 0, 0, 0.75) 100%
+  );
+
+  color: var(--fourth-color);
+  font-weight: bold;
+}
+
+.all-collections {
+  background-color: var(--first-color);
+  color: var(--fourth-color);
+  padding: 10px;
+  border-radius: 1rem;
+  font-weight: 700;
+  letter-spacing: 1px;
+  transition: filter 0.5s ease;
+}
+
+.all-collections:hover {
+  filter: saturate(1.5);
 }

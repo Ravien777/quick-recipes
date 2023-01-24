@@ -102,9 +102,14 @@
         <section class="hero">
           <div class="hero-content">
             <h1>Hungry? Get recipes</h1>
-            <div class="search-form">
-              <i class="fa fa-search" aria-hidden="true"></i>
-              <input type="search" name="search_recipes" id="search_recipes" />
+            <div class="search-form" id="search_form_div">
+              <a href=""><i class="fa fa-search" aria-hidden="true"></i></a>
+              <input
+                type="search"
+                name="search_recipes"
+                id="search_recipes"
+                placeholder="Search by recipe, ingredient or keyword"
+              />
             </div>
           </div>
         </section>
@@ -112,37 +117,27 @@
           <h2>Popular Collections</h2>
           <div class="collections">
             <div class="collection-item">
-              <a href="">
-                <img src="" alt="" />
-                <h3>30-Minute Meals</h3>
+              <a href="" class="collection-link seafood">
+                <p>Seafood</p>
               </a>
             </div>
-          </div>
-          <div class="collections">
             <div class="collection-item">
-              <a href="">
-                <img src="" alt="" />
-                <h3>Soups, Stews & Chili</h3>
+              <a href="" class="collection-link breakfast">
+                <p>Breakfast</p>
               </a>
             </div>
-          </div>
-          <div class="collections">
             <div class="collection-item">
-              <a href="">
-                <img src="" alt="" />
-                <h3>One-Pot Meals</h3>
+              <a href="" class="collection-link dinner">
+                <p>Dinner</p>
               </a>
             </div>
-          </div>
-          <div class="collections">
             <div class="collection-item">
-              <a href="">
-                <img src="" alt="" />
-                <h3>Breakfast</h3>
+              <a href="" class="collection-link salads">
+                <p>Salads</p>
               </a>
             </div>
           </div>
-          <a href="">View All Collections</a>
+          <a href="" class="all-collections">View All Collections</a>
         </section>
         <section class="quick-recipes">
           <h2>Easy & Quick Recipes</h2>
