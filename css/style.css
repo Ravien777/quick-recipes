@@ -15,14 +15,6 @@
   font-family: "Poppins", "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
 }
 
-.header-main {
-  padding: 1rem;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  position: relative;
-}
-
 h1,
 h2,
 h3,
@@ -38,8 +30,16 @@ a {
   color: var(--second-color);
 }
 
+.header-main {
+  padding: 1rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: relative;
+}
+
 .logo-link {
-  height: 1.7rem;
+  height: 2rem;
   width: auto;
 }
 
@@ -60,8 +60,7 @@ a {
 }
 
 .account,
-.favorites,
-.toggle-mobile-menu {
+.favorites {
   background-color: transparent;
   border: none;
   cursor: pointer;
@@ -70,8 +69,8 @@ a {
 .favorites,
 .account,
 .favorites svg {
-  height: 1.6rem;
-  width: 1.6rem;
+  height: 2rem;
+  width: 2rem;
 }
 
 .account img {
@@ -86,22 +85,64 @@ header {
   color: var(--second-color);
 }
 
-.hamburger-menu .line {
-  display: block;
+.hamburger-menu {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   width: 1.5rem;
-  height: 0.27rem;
-  background-color: var(--second-color);
-  border-radius: 1rem;
+  height: 1.5rem;
+  cursor: pointer;
+  transition: all 0.4s ease-in-out;
+  border: none;
+  background: none;
+  outline: none;
 }
 
-.hamburger-menu .line:not(:last-child) {
-  margin-bottom: 0.25rem;
+.hamburger-menu .bar {
+  width: 1.5rem;
+  height: 0.33rem;
+  background-color: var(--second-color);
+  border-radius: 1rem;
+  transition: all 0.4s ease-in-out;
+}
+
+.hamburger-menu .bar::after,
+.hamburger-menu .bar::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  width: 1.5rem;
+  height: 0.33rem;
+  background-color: var(--second-color);
+  border-radius: 1rem;
+  transition: all 0.4s ease-in-out;
+}
+
+.hamburger-menu .bar::before {
+  transform: translateY(-0.65rem);
+}
+
+.hamburger-menu .bar::after {
+  transform: translateY(0.65rem);
+}
+
+.hamburger-menu.open .bar {
+  transform: translateX(-50px);
+  background: transparent;
+}
+
+.hamburger-menu.open .bar::after {
+  transform: rotate(45deg) translate(35px, -35px);
+}
+
+.hamburger-menu.open .bar::before {
+  transform: rotate(-45deg) translate(35px, 35px);
 }
 
 .header-secondary {
   position: fixed;
   z-index: 3;
-  right: 10000px;
   background-color: #fff;
   width: 100%;
   height: 100vh;
@@ -110,7 +151,16 @@ header {
   border-width: 1px 0 0;
   border-color: #dad9d9;
   border-style: solid;
-  width: 100%;
+  right: 100%;
+  transition: 0.4s;
+}
+
+.header-secondary.is-active {
+  right: 0;
+}
+
+.header-main .right.not-visible {
+  visibility: hidden;
 }
 
 .menu-items {
@@ -170,12 +220,12 @@ header {
 
 .hero {
   width: 100%;
-  height: 35vh;
+  height: 60vh;
   color: var(--second-color);
 
-  background-image: url("../img/hero.jpg");
+  background-image: url("../img/hero-mobile.png");
   background-color: var(--fourth-color);
-  background-position: bottom;
+  background-position: center;
   background-size: cover;
   background-repeat: no-repeat;
   background-clip: border-box;
@@ -187,13 +237,13 @@ header {
 
 .hero-content {
   text-align: center;
-  margin: 1rem;
+  padding: 1rem;
 }
 
 .hero-content h1 {
+  font-size: 2rem;
   user-select: none;
-  margin-bottom: 0.5rem;
-  padding: 0 1rem;
+  margin-bottom: 1rem;
   color: var(--second-color);
 }
 
@@ -209,7 +259,7 @@ header {
   height: 100%;
   border: none;
   border-radius: 1rem;
-  padding: 10px;
+  padding: 1rem;
   color: var(--second-color);
   letter-spacing: 1px;
 }
@@ -430,11 +480,23 @@ header {
   letter-spacing: 1px;
   font-size: small;
   padding: 0.5rem 0.5rem 1rem;
-  color: var(--second-color);
+  color: var(--third-color);
 }
 
 .news-item img {
   height: 150px;
   width: 100%;
   border-radius: 1rem 1rem 0 0;
+}
+
+footer {
+  background-color: var(--second-color);
+  padding: 1rem;
+  display: grid;
+  place-items: center;
+}
+
+footer p {
+  color: var(--fourth-color);
+  letter-spacing: 1px;
 }
