@@ -106,7 +106,7 @@ header {
 .hamburger-menu .bar {
   width: 1.5rem;
   height: 0.33rem;
-  background-color: var(--second-color);
+  background-color: var(--first-color);
   border-radius: 1rem;
   transition: all 0.4s ease-in-out;
 }
@@ -118,7 +118,7 @@ header {
   left: 0;
   width: 1.5rem;
   height: 0.33rem;
-  background-color: var(--second-color);
+  background-color: var(--first-color);
   border-radius: 1rem;
   transition: all 0.4s ease-in-out;
 }
@@ -435,12 +435,18 @@ header {
 
 .recipe-item .top {
   position: relative;
+  overflow: hidden;
 }
 
 .recipe-item img {
   width: 100%;
   height: auto;
+  transition: all 0.4s ease;
   border-radius: 1rem 1rem 0 0;
+}
+
+.recipe-item img:hover {
+  transform: scale(1.2);
 }
 
 .favo-btn {
@@ -520,6 +526,12 @@ footer p {
   .recipes {
     grid-template-columns: 1fr 1fr;
   }
+  .collection-link.seafood,
+  .collection-link.breakfast,
+  .collection-link.dinner,
+  .collection-link.salads {
+    height: 125px;
+  }
 }
 
 @media screen and (min-width: 640px) {
@@ -535,6 +547,18 @@ footer p {
   }
   .recipes {
     grid-template-columns: repeat(3, 1fr);
+  }
+  .collection-link.seafood,
+  .collection-link.breakfast,
+  .collection-link.dinner,
+  .collection-link.salads {
+    height: 135px;
+  }
+  .all-collections,
+  .all-recipes,
+  .all-news {
+    min-width: 300px;
+    margin: 0 auto;
   }
 }
 
@@ -618,12 +642,6 @@ footer p {
   }
   .collections {
     min-width: 900px;
-    margin: 0 auto;
-  }
-  .all-collections,
-  .all-recipes,
-  .all-news {
-    min-width: 300px;
     margin: 0 auto;
   }
   .recipes {
