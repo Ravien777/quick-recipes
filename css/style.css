@@ -202,7 +202,7 @@ header {
 .hover-underline {
   display: inline-block;
   position: relative;
-  color: var(--red-color);
+  color: var(--first-color);
 }
 
 .hover-underline:after {
@@ -213,7 +213,7 @@ header {
   height: 2px;
   bottom: 0;
   left: 0;
-  background-color: var(--red-color);
+  background-color: var(--first-color);
   transform-origin: bottom left;
   transition: transform 0.25s ease-out;
 }
@@ -427,7 +427,7 @@ header {
 }
 
 .description h3 {
-  color: var(--red-color);
+  color: var(--first-color);
   font-style: oblique;
   font-weight: 700;
   text-transform: uppercase;
@@ -459,7 +459,7 @@ header {
   padding: 5px;
   border-radius: 50%;
   border: none;
-  background-color: var(--red-color);
+  background-color: var(--first-color);
   cursor: pointer;
   transition: filter 0.5s ease;
 }
