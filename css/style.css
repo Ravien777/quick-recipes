@@ -416,8 +416,8 @@ header {
 
 .recipe-item,
 .news-item {
-  background-color: var(--fourth-color);
   border-radius: 1rem;
+  text-align: left;
 }
 
 .recipe-item .description {
@@ -471,7 +471,7 @@ header {
 .review {
   width: 100%;
   display: flex;
-  justify-content: center;
+  justify-content: flex-start;
   align-items: flex-start;
   gap: 0.5rem;
 }
