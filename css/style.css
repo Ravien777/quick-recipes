@@ -504,6 +504,43 @@ header {
   user-select: none;
 }
 
+.leftover-recipes {
+  width: 100%;
+  height: 60vh;
+  position: relative;
+}
+
+.leftover-recipes-bg {
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-image: url("../img/emy-XoByiBymX20-unsplash.jpg");
+  width: 100%;
+  height: 60vh;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.leftover-recipes-content {
+  position: absolute;
+  top: 15%;
+  left: 10%;
+  right: 10%;
+  max-width: 350px;
+  background-color: #fff;
+  padding: 1rem;
+  border-radius: 1rem;
+}
+
+.leftover-recipes-content h2 {
+  margin-bottom: 1rem;
+}
+
+.leftover-recipes-content p {
+  margin-bottom: 1rem;
+}
+
 .news-item h3 {
   letter-spacing: 1px;
   font-size: small;
@@ -647,6 +684,11 @@ footer p {
   }
   .hover-underline:after {
     background-color: var(--first-color);
+  }
+  .leftover-recipes-content {
+    top: 20%;
+    left: 15%;
+    max-width: 400px;
   }
 }
 
