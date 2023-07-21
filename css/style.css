@@ -267,7 +267,7 @@ header {
 
 .search-form {
   background-color: #fff;
-  border-radius: 1rem;
+  border-radius: 50px;
   width: 100%;
   cursor: text;
 }
@@ -276,7 +276,7 @@ header {
   width: 85%;
   height: 100%;
   border: none;
-  border-radius: 1rem;
+  border-radius: 50px;
   padding: 1rem;
   color: var(--second-color);
   letter-spacing: 1px;
