@@ -30,6 +30,11 @@ a {
   color: var(--second-color);
 }
 
+.size-full {
+  height: 100% !important;
+  width: 100% !important;
+}
+
 header {
   position: relative;
   color: var(--second-color);
@@ -691,6 +696,12 @@ footer p {
 }
 
 @media screen and (min-width: 1008px) {
+  .height-3 {
+    height: 3rem;
+  }
+  .width-3 {
+    width: 3rem;
+  }
   .hero {
     height: 50vh;
   }
@@ -754,14 +765,7 @@ footer p {
     max-width: 1200px;
   }
   .logo-link {
-    height: 3rem;
     width: auto;
-  }
-  .favorites,
-  .account,
-  .favorites svg {
-    height: 3rem;
-    width: 3rem;
   }
   .menu-item .link {
     letter-spacing: 1px;

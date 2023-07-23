@@ -22,3 +22,10 @@ menu_btn.addEventListener("click", () => {
     window.scrollTo(0, parseInt(scrollY || "0") * -1);
   }
 });
+
+window.addEventListener("scroll", () => {
+  console.log(scrollY);
+  if (scrollY > 90) {
+    // Change height of elements in header to 2rem
+  }
+});
